@@ -1,5 +1,29 @@
+\documentclass[10.5pt]{article}
+ \usepackage{amsmath, amsthm, amssymb}
+ \usepackage[full]{complexity}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+\newclass{\varA}{A}
+\newclass{\varB}{B}
+\newclass{\LL}{L}
+\newclass{\SO}{SO}
+\newclass{\ID}{ID}
+\newclass{\MD}{MD}
+\newclass{\MID}{MID}
+\newclass{\IFP}{IFP}
+\newclass{\LFP}{LFP}
+\newclass{\Str}{Str}
+\newclass{\Fin}{Fin}
+\newclass{\End}{End}
+\newclass{\Ord}{Ord}
+\newclass{\Th}{Th}
+\newfunc{\F}{F}
+\newfunc{\ifp}{ifp}
+\newfunc{\lfp}{lfp}
+\newtheorem{lemma}{Lemma}
 %Prefacio
-\include{Prefacio}
+%\include{Prefacio}
 
 \title{Category Theory and \\ Computational Complexity}
 \author{Marco Larrea \and Octavio Zapata}
@@ -9,6 +33,12 @@
 A first-order dependence logic $D$ is a class which consists of all $D$-definable properties where $D := (FO + \mu.\bar{t})$ and $\mu.\bar{t}$ denotes that term $t_{|\bar{t}|}$ is functionally dependent on $t_{i}$ for all $i\leq |\bar{t}|$. The model class $FO$ is as always defined as the class of models of all first-order sentences (i.e. $FO:= \{S:(\exists\tau)(\exists\varphi\in L(\tau))\ S=Mod(\varphi)\}$ where $L(\tau)$ is a first-order language of type $\tau$) and $\mu.\bar{t}$ is interpreted as a recursively generated tuple of terms which we naturally identify with the set $[|\bar{t}|] := \{1,2,\dots,|\bar{t}|\}$. $D$ sentences are capable to characterise variable dependence and in general they are proven to be as expressive as the sentences of the second order $\Sigma_1^1$ fragment. The intuitionistic dependence version $ID$ has the same expressive power as full $SO$. It is a fact that $MID$-model checking is $PSPACE$-complete where $MID$ is the intuitionistic implication fragment of the modal dependence logic $MD$ which contains at least two modifiers. Hence, $(FO + \mu.\bar{t}) = NP, ID = \Sigma_{\ast}P$ and $MID = PSPACE$.  On the other hand, $PSPACE = IP = QIP$, and so $MID = QIP$ which is the quantum version of the interactive polytime class $IP$.
 
 We shall try to cook up a purely algebraic definition for the class of structures $MID$ and extend such categorical logic in order to capture other quantum and classical complexity classes. 
+
+Ehrenfeucht-Fra\"iss\'e games characterise the expressive power of logical languages \cite{ams}. Every Ehrenfeucht-Fra\"iss\'e game is an ultraproduct \cite{models}. A back-and-forth method for showing isomorphism between countably infinite structures. If $F$ is an ultrafilter (i.e. $F\subseteq 2^{\mathbb{N}}$ and $\forall X\subseteq\mathbb{N} (X\notin F \Leftrightarrow \mathbb{N}\setminus X\in F)$ holds) then the reduced product $\prod_{i}M_i / F$ is an ultraproduct of the sets $M_i$, $i\in I$. Recall that \[f\sim g \Leftrightarrow \{i\in I : f(i) = g(i)\}\in F\] for all infinite sequences $f,g\in\prod_i M_i$ and any index set $I$ is the relation which induces the equivalence classes that conform the ultraproduct \[\prod_{i}M_i / F = \{[f]:f\in\prod_i M_i\}.\] 
+
+\begin{lemma}[$\L$o\'s Lemma]
+If $F$ is an ultrafilter and $\varphi$ a first-order formula, then the ultraproduct of models of $\varphi$ indexed by any index set $I\in F$ is a model of $\varphi$, i.e. \[(\prod_i A_i / F , \alpha)\models\varphi\Leftrightarrow\{i\in I: (A_i, \alpha_i)\models\varphi\}\in F.\]
+\end{lemma}
 
 \nocite{*}
 \bibliographystyle{alpha}
