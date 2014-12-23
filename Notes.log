@@ -1,8 +1,12 @@
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  23 DEC 2014 10:39
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.22)  23 DEC 2014 11:02
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
+<<<<<<< Updated upstream
 **Notes.tex
 (./Notes.tex
 LaTeX2e <2014/05/01>
@@ -12,8 +16,13 @@ Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 
 (./Prefacio.tex (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+=======
+**\input Notes.tex
+(./Notes.tex (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+>>>>>>> Stashed changes
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -152,12 +161,21 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsthm.sty
+<<<<<<< Updated upstream
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks21
 \thm@bodyfont=\toks22
 \thm@headfont=\toks23
 \thm@notefont=\toks24
 \thm@headpunct=\toks25
+=======
+Package: amsthm 2009/07/02 v2.20.1
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+>>>>>>> Stashed changes
 \thm@preskip=\skip46
 \thm@postskip=\skip47
 \thm@headsep=\skip48
@@ -595,9 +613,10 @@ Package: complexity 11/24/06  v0.77
     author: Chris Bourke (cbourke@cse.unl.edu) 
   +----------------------------------------------+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/complexity/mycomplexity.sty))
+<<<<<<< Updated upstream
 (/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count132
@@ -605,6 +624,40 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box39
 \@float@everytoks=\toks41
 \@floatcapt=\box40
+=======
+(/usr/local/texlive/2014/texmf-dist/tex/latex/bussproofs/bussproofs.sty
+Proof Tree (bussproofs) style macros. Version 1.1.
+\theLevel=\count99
+\myMaxLevel=\count100
+\myBoxA=\box28
+\myBoxB=\box29
+\myBoxC=\box30
+\myBoxD=\box31
+\myBoxLL=\box32
+\myBoxRL=\box33
+\thisAboveSkip=\dimen112
+\thisBelowSkip=\dimen113
+\newScoreStart=\dimen114
+\newScoreEnd=\dimen115
+\newCenter=\dimen116
+\displace=\dimen117
+\leftLowerAmt=\dimen118
+\rightLowerAmt=\dimen119
+\scoreHeight=\dimen120
+\scoreDepth=\dimen121
+\htLbox=\dimen122
+\htRbox=\dimen123
+\htRRbox=\dimen124
+\htRRRbox=\dimen125
+\htAbox=\dimen126
+\htCbox=\dimen127
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+>>>>>>> Stashed changes
 )
 \@float@every@table=\toks42
 
@@ -619,8 +672,26 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \f@ncyO@olf=\skip57
 \f@ncyO@orf=\skip58
 )
+<<<<<<< Updated upstream
 \c@thm=\count133
 )
+=======
+\Gm@cnth=\count101
+\Gm@cntv=\count102
+\c@Gm@tempcnt=\count103
+\Gm@bindingoffset=\dimen128
+\Gm@wd@mp=\dimen129
+\Gm@odd@mp=\dimen130
+\Gm@even@mp=\dimen131
+\Gm@layoutwidth=\dimen132
+\Gm@layoutheight=\dimen133
+\Gm@layouthoffset=\dimen134
+\Gm@layoutvoffset=\dimen135
+\Gm@dimlist=\toks26
+)
+\c@lemma=\count104
+
+>>>>>>> Stashed changes
 
 LaTeX Warning: Unused global option(s):
     [10.5pt].
@@ -628,6 +699,7 @@ LaTeX Warning: Unused global option(s):
 (./Notes.aux)
 \openout1 = `Notes.aux'.
 
+<<<<<<< Updated upstream
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
@@ -642,6 +714,20 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+>>>>>>> Stashed changes
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -677,6 +763,7 @@ LaTeX Font Info:    ... okay on input line 7.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+<<<<<<< Updated upstream
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count134
@@ -731,11 +818,19 @@ LaTeX Font Info:    Try loading font information for U+msa on input line 9.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 9.
+=======
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+>>>>>>> Stashed changes
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
+<<<<<<< Updated upstream
 LaTeX Warning: Citation `dep' on page 1 undefined on input line 11.
 
 
@@ -747,9 +842,13 @@ LaTeX Warning: Citation `dep' on page 1 undefined on input line 11.
 
 LaTeX Warning: Citation `qip' on page 1 undefined on input line 11.
 
+=======
+LaTeX Warning: Citation `ams' on page 1 undefined on input line 39.
+>>>>>>> Stashed changes
 
 LaTeX Warning: Citation `ams' on page 1 undefined on input line 15.
 
+<<<<<<< Updated upstream
 
 LaTeX Warning: Citation `models' on page 1 undefined on input line 15.
 
@@ -761,13 +860,16 @@ sive power of log-i-cal lan-guages [[]]. Ev-ery Ehrenfeucht-
 
 
 LaTeX Warning: Command \L invalid in math mode on input line 17.
+=======
+LaTeX Warning: Citation `models' on page 1 undefined on input line 39.
+>>>>>>> Stashed changes
 
-No file Notes.bbl.
 [1
 
 
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<<<<<<< Updated upstream
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
 
@@ -777,12 +879,21 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 26.
 Package rerunfilecheck Info: File `Notes.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
+=======
+\myBox1=\box34
+\myScoreStart1=\dimen136
+\myCenter1=\dimen137
+\myScoreEnd1=\dimen138
+
+[2] (./Notes.aux)
+>>>>>>> Stashed changes
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< Updated upstream
  17565 strings out of 493117
  334109 string characters out of 6135432
  405543 words of memory out of 5000000
@@ -810,4 +921,34 @@ PDF statistics:
  55 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 2371 strings out of 493109
+ 26645 string characters out of 6135003
+ 93499 words of memory out of 5000000
+ 5834 multiletter control sequences out of 15000+600000
+ 12447 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 27i,8n,26p,1313b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Notes.pdf (2 pages, 149961 bytes).
+PDF statistics:
+ 71 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> Stashed changes
 
