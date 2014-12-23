@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  23 DEC 2014 10:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  23 DEC 2014 10:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -785,11 +785,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
 Here is how much of TeX's memory you used:
  17565 strings out of 493117
  334109 string characters out of 6135432
- 404543 words of memory out of 5000000
+ 405543 words of memory out of 5000000
  20711 multiletter control sequences out of 15000+600000
  11842 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,8n,86p,1133b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,8n,86p,1161b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -804,7 +804,7 @@ xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Notes.pdf (1 page, 133149 bytes).
+Output written on Notes.pdf (1 page, 134616 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
