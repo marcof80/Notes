@@ -74,7 +74,27 @@ type with only one term which we shall name the \emph{unit type}:
       \UnaryInfC{$1 \ type$}
 \end{prooftree}
 
+There are two introduction rules for types, these rules tell us how to construct new types from old ones. There is the introduction rule for \emph{product types}:
 
+\begin{prooftree}
+      \AxiomC{$A \ type$}
+      \AxiomC{$B \ type$}
+      \BinaryInfC{$A \times B \ type$}
+\end{prooftree}
+and the introduction rule for \emph{function types}:
+
+\begin{prooftree}
+      \AxiomC{$A \ type$}
+      \AxiomC{$B \ type$}
+      \BinaryInfC{$A \rightarrow B \ type$}
+\end{prooftree}
+
+Therefore the set of all types of the simply-typed lambda calculus is recursively generated from the set of basic types by applying the introduction rules of products and functions. 
+
+Now the set of types is defined we would like to define in a similar way the set of terms. As before we fix a set of \emph{constant terms} or just \emph{constants}. We also asume there are countable many variables (or as many as we might need), we'll name the variables $x, y, z, \dots$. Just as types we will recursively generate the set of terms as follows:
+\[
+t := [variables] | [constants] | * | <t , t'> | \pi_1 t | \pi_2 t | t(t') | \lambda x.t
+\]
 \nocite{*}
 \bibliographystyle{alpha}
 \bibliography{paper}

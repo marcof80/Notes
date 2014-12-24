@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.22)  24 DEC 2014 00:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.22)  24 DEC 2014 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -770,25 +770,29 @@ LaTeX Warning: Command \L invalid in math mode on input line 20.
 \myScoreStart1=\dimen194
 \myCenter1=\dimen195
 \myScoreEnd1=\dimen196
+\myBox2=\box50
+\myScoreStart2=\dimen197
+\myCenter2=\dimen198
+\myScoreEnd2=\dimen199
 
-(./Notes.bbl) [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
+(./Notes.bbl [2]) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (./Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `Notes.out' has not changed.
 (rerunfilecheck)             Checksum: F7B95590D9D8D0B2433CB2CBCF4D9E03;143.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 17752 strings out of 493109
- 336565 string characters out of 6135003
- 410601 words of memory out of 5000000
- 20884 multiletter control sequences out of 15000+600000
- 12800 words of font info for 49 fonts, out of 8000000 for 9000
+ 17784 strings out of 493109
+ 336899 string characters out of 6135003
+ 412002 words of memory out of 5000000
+ 20902 multiletter control sequences out of 15000+600000
+ 12968 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,11n,86p,1171b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,11n,86p,1171b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -803,12 +807,13 @@ xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Notes.pdf (2 pages, 168265 bytes).
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Notes.pdf (3 pages, 190777 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
