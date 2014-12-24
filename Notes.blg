@@ -1,47 +1,49 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Notes.aux
-I found no \bibdata command---while reading file Notes.aux
-I found no \bibstyle command---while reading file Notes.aux
-You've used 4 entries,
-            0 wiz_defined-function locations,
-            87 strings with 499 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
+The style file: alpha.bst
+Database file #1: paper.bib
+Warning--empty journal in ams
+Warning--empty year in ams
+You've used 16 entries,
+            2543 wiz_defined-function locations,
+            654 strings with 6242 characters,
+and the built_in function-call counts, 5140 in all, are:
+= -- 494
+> -- 196
+< -- 13
++ -- 65
+- -- 60
+* -- 324
+:= -- 859
+add.period$ -- 50
+call.type$ -- 16
+change.case$ -- 84
+chr.to.int$ -- 16
+cite$ -- 18
+duplicate$ -- 222
+empty$ -- 420
+format.name$ -- 87
+if$ -- 1049
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+missing$ -- 15
+newline$ -- 82
+num.names$ -- 48
+pop$ -- 115
+preamble$ -- 1
+purify$ -- 104
 quote$ -- 0
-skip$ -- 0
+skip$ -- 172
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
+substring$ -- 214
+swap$ -- 16
+text.length$ -- 13
+text.prefix$ -- 11
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+type$ -- 112
+warning$ -- 2
+while$ -- 41
+width$ -- 20
+write$ -- 200
+(There were 2 warnings)

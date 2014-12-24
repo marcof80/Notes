@@ -1,0 +1,89 @@
+\begin{thebibliography}{JJUW11}
+
+\bibitem[Ala13]{lambda}
+Jesse Alama.
+\newblock The lambda calculus.
+\newblock
+  \url{http://plato.stanford.edu/archives/fall2013/entries/lambda-calculus/},
+  2013.
+
+\bibitem[APW13]{Awodey-U}
+Steve Awodey, Alvaro Pelayo, and Michael~A. Warren.
+\newblock Univalence axiom in homotopy type theory.
+\newblock {\em Notices of the AMS}, 60(9):1164--1167, 2013.
+
+\bibitem[CF58]{Curry-C}
+Haskell~B Curry and Robert Feys.
+\newblock {\em Combinatory Logic, Studies in Logic and the Foundations of
+  Mathematics}, volume~1.
+\newblock North-Holland, Amsterdam, 1958.
+
+\bibitem[Chu40]{Church-ST}
+Alonzo Church.
+\newblock A formulation of the simple theory of types.
+\newblock {\em The Journal of Symbolic Logic}, 5(2):56--68, Jun. 1940.
+
+\bibitem[Coq13]{coq}
+Thierry Coquand.
+\newblock Coq.
+\newblock \url{coq.infra.fr}, 2013.
+
+\bibitem[How95]{Howard-C}
+W.~A. Howard.
+\newblock The formu\ae-as-types notion of construction.
+\newblock In {\em The Curry-Howard Isomorphism}. Academia, 1995.
+
+\bibitem[Imm]{ams}
+Neil Immerman.
+\newblock Descriptive complexity: a logician's approach to computation.
+
+\bibitem[JJUW11]{qip}
+Rahul Jain, Zhengfeng Ji, Sarvagya Upadhyay, and John Watrous.
+\newblock Qip = pspace.
+\newblock {\em J. ACM}, 58(6):30:1--30:27, December 2011.
+
+\bibitem[KLV12]{SModel-V}
+Chris Kapulkin, Peter~LeFanu Lumsdaine, and Vladimir Voevodsky.
+\newblock The simplicial model of univalent foundations.
+\newblock {\em arXiv preprint}, Nov. 2012.
+
+\bibitem[ML84]{Martin-I}
+Per Martin-L\"of.
+\newblock An intuitionistic theory of types: Predicative part.
+\newblock {\em The Journal of Symbolic Logic}, 49(1):311--313, Mar. 1984.
+
+\bibitem[Nor13]{agda}
+Ulf Norell.
+\newblock Agda.
+\newblock \url{wiki.portal.chalmers.se/agda/pmwiki.php}, 2013.
+
+\bibitem[Sch13]{groupoid}
+Urs Schreiber.
+\newblock Infinity groupoid.
+\newblock \url{http://ncatlab.org/nlab/show/infinity-groupoid}, 2013.
+
+\bibitem[{Uni}13]{hottbook}
+The {Univalent Foundations Program}.
+\newblock {\em Homotopy Type Theory: Univalent Foundations of Mathematics}.
+\newblock \url{http://homotopytypetheory.org/book}, Institute for Advanced
+  Study, 2013.
+
+\bibitem[V{\"a}{\"a}07]{dep}
+J.~V{\"a}{\"a}n{\"a}nen.
+\newblock {\em Dependence Logic: A New Approach to Independence Friendly
+  Logic}.
+\newblock London Mathematical Society Student Texts. Cambridge University
+  Press, 2007.
+
+\bibitem[V{\"a}{\"a}11]{models}
+J.~V{\"a}{\"a}n{\"a}nen.
+\newblock {\em Models and Games}.
+\newblock Cambridge Studies in Advanced Mathematics. Cambridge University
+  Press, 2011.
+
+\bibitem[Voe06]{Voevodsky-F}
+Vladimir Voevodsky.
+\newblock Foundations of mathematics and homotopy theory.
+\newblock \url{http://video.ias.edu/node/68}, Mar. 2006.
+
+\end{thebibliography}
