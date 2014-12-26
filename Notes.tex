@@ -173,7 +173,6 @@ type with only one term which we shall name the \emph{unit type}:
 
 There are two introduction rules for types, these rules tell us how to construct new types from old ones. There is the introduction rule for \emph{product types}:
 
-<<<<<<< Updated upstream
 \begin{prooftree}
       \AxiomC{$A \ type$}
       \AxiomC{$B \ type$}
@@ -191,10 +190,102 @@ Therefore the set of all types of the simply-typed lambda calculus is recursivel
 
 Now the set of types is defined we would like to define in a similar way the set of terms. As before we fix a set of \emph{constant terms} or just \emph{constants}. We also asume there are countable many variables (or as many as we might need), we'll name the variables $x, y, z, \dots$. Just as types we will recursively generate the set of terms as follows:
 \[
-t := [variables] | [constants] | * | <t , t'> | \pi_1 t | \pi_2 t | t(t') | \lambda x.t
+t := [variables] \ | \ [constants] \ | \  * \ | \ <t , t'> \ | \ \pi_1 t \ | \ \pi_2 t \ | \ t(t') \ | \ \lambda x.t
 \]
-=======
->>>>>>> Stashed changes
+
+There are two ways a variable $x$ can appear in a given term $t$. We say that $x$ is \emph{bound} in $t$ if it appears in the scope of a lambda abstraction, i.e. if inside of $t$ there is a substring of the form $\lambda x.t'$ for some $t'$. \emph{Free} variables are those that are not bound.
+
+A very important syntactic operation of terms is \emph{substitution}. Given a term $t$ (such that a variable $x$ may ocurre freely in it), for any term $u$, the new term
+\[
+t[u/x]
+\]
+is obtained from $t$ by substituting the free occurrences of the variable $x$ by $u$. For example, consider the term:
+\[
+t = <\lambda x.<x, y> , z>
+\]
+In $t$ we have that the variables $y$ and $z$ are free while $x$ is bound. Let $u = <a , \lambda w.w>$, we can substitute in $t$ the variable $y$ for $u$ to form the next term:
+\[
+t[u/y] = <\lambda x.<x, <a, \lambda w.w>> , z>
+\]
+If we try to substitute the variable $x$ for $u$ we would obtain the term $t$ again since $x$ is bound, i.e. $t[u/x] = t$.
+
+A \emph{context} is a finite sequence of typed variables, that is, if $x_1, x_2, \dots , x_n$ are distinct variables and $A_1, A_2, \dots , A_n$ are types, the sequence 
+\[
+x_1 : A_1 , x_2 : A_2 , \dots , x_n : A_n
+\]  
+is a context, the empty sequence is a valid context. We denote contexts with capital greek letters $\Delta, \Gamma, \dots$
+
+A \emph{typing judgment} is of the form:
+\[
+\Gamma \vdash t:A
+\]
+where $\Gamma$ is a context, $t$ a term and $A$ a type. We read the above judgement as ``In context $\Gamma$ the term $t$ is of type $A$''. Intuitively what we mean by this judgement is that the free variables of $t$ must ocurre in $\Gamma$.
+
+To form new typing judgements we need to follow some specified rules. We will now enunciate the rules of the simply-typed lambda calculus.
+\begin{itemize}
+  \item Each constant term has a unique determined type, i.e. for each constant $a$ there is a unique type $A$   such that for every context $\Gamma$ we have that:
+    \begin{prooftree}
+      \AxiomC{}
+      \UnaryInfC{$\Gamma \vdash a : A$}
+    \end{prooftree}
+    \item The type of a variable is determined by the context, i.e. if $x_i : A_i$ ocurre in a context $\Gamma$ we have that:
+    \begin{prooftree}
+      \AxiomC{}
+      \UnaryInfC{$\Gamma \vdash x_i : A_i$}
+    \end{prooftree}
+    \item The term $*$ has type $1$ in every context:
+    \begin{prooftree}
+      \AxiomC{}
+      \UnaryInfC{$\Gamma \vdash * : 1$}
+    \end{prooftree}
+    \item Rules for product types:
+    \begin{center}
+      \begin{minipage}[t]{5cm}
+        \vspace{0pt}  
+        \begin{prooftree}
+          \AxiomC{$\Gamma \vdash u : A$}
+          \AxiomC{$\Gamma \vdash t : B$}
+          \BinaryInfC{$\Gamma \vdash <u, t> : A \times B$}
+        \end{prooftree}
+      \end{minipage}
+      \begin{minipage}[t]{5cm}
+        \vspace{0pt}
+        \begin{prooftree}
+          \AxiomC{$\Gamma \vdash t : A \times B$}
+          \UnaryInfC{$\Gamma \vdash \pi_1 t : A$}
+        \end{prooftree}
+      \end{minipage}
+      \begin{minipage}[t]{5cm}
+        \vspace{0pt}
+        \begin{prooftree}
+          \AxiomC{$\Gamma \vdash t : A \times B$}
+          \UnaryInfC{$\Gamma \vdash \pi_2 t : B$}
+        \end{prooftree}
+      \end{minipage}
+    \end{center}
+    
+    \item Rules for function types:
+    \begin{center}
+      \vspace{0pt}  
+      \begin{minipage}[t]{5cm}
+        \vspace{0pt}  
+        \begin{prooftree}
+          \AxiomC{$\Gamma \vdash t : A \rightarrow B$}
+          \AxiomC{$\Gamma \vdash u : A$}
+          \BinaryInfC{$\Gamma \vdash t(u) : B$}
+        \end{prooftree}
+      \end{minipage}
+      \begin{minipage}[t]{5cm}
+        \vspace{0pt}
+        \begin{prooftree}
+          \AxiomC{$\Gamma , x : A \vdash t : B$}
+          \UnaryInfC{$\Gamma \vdash \lambda x.t : A \rightarrow B$}
+        \end{prooftree}
+      \end{minipage}
+    \end{center}
+where $\Gamma , x : A$ is the context $\Gamma \cup \{x : A\}$.
+
+\end{itemize}
 \nocite{*}
 \bibliographystyle{alpha}
 \bibliography{paper}
