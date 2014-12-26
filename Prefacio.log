@@ -1,0 +1,17 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdftex 2014.10.17)  23 DEC 2014 12:39
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Prefacio.tex
+(./Prefacio.tex
+./Prefacio.tex:2: Undefined control sequence.
+l.2 \documentclass
+                  [10.5pt, a4paper]{article}
+? 
+./Prefacio.tex:2: Emergency stop.
+l.2 \documentclass
+                  [10.5pt, a4paper]{article}
+End of file on the terminal!
+
+./Prefacio.tex:2:  ==> Fatal error occurred, no output PDF file produced!
