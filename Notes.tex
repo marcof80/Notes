@@ -70,8 +70,29 @@ It follows from the definitions that
 \end{conj}
 
 \subsection{Descriptive complexity}
+Recall that for every alphabet $\Sigma$ and every Turing machine $M$, we can consider the language \[L(M) = \{w\in\Sigma^{\ast} : M\text{ accepts }w\}.\] We call $L(M)$ the language \emph{decided} by $M$, since for each string $w$ the machine $M$ decides whether it accepts $w$ or not. 
+
+For represent a property $\mathcal{P}\subseteq\Ord(\tau)$ as a language in $\{0,1\}^{\ast}$, we use some encoding into binary strings $\langle\ \cdot\ \rangle:\Ord\rightarrow\{0,1\}^{\ast}$ and let 
+\[L(\mathcal{P}):=\{ \langle A, < \rangle: (A,<)\in\mathcal{P} \}\subseteq\{0,1\}^{\ast}.\]
+Arbitrarily classes of finite structures, not necessarily ordered, are encoded using the same representation scheme. That is, for each $\K\subseteq \Fin$ we define the binary language 
+\[L(\K):=\{ \langle A, < \rangle: A\in\K,\ <\text{is a linear order on } U(A) \}.\]
+
+We will say that a property $\mathcal{P}\subseteq\Fin$ is \emph{decidable} if there exists  a Turing machine $M$ that decides the language $L(\mathcal{P})\subseteq \{0,1\}^{\ast}$, that is, if $L(\mathcal{P})=L(M)$.
+
+In descriptive complexity theory one would like to establish a relationship between computational complexity classes and different types of logics.  Let $\mathcal{P}$ be a property of $\tau$-structures and $\L$ some logic. We say that $\mathcal{P}$ is $\L$-\emph{definable} if there exists a sentence $\varphi\in\L(\tau)$ such that $\mathcal{P} = \Mod(\varphi)$. We define $\FO$ as the set of all $\FO$-definable properties.
+
+Recall that given a any first-order sentence $\psi$, the model class $\Mod(\psi)$ is contained in the class of all structures and therefore, for finite structures, we have that every model class is an $\FO$-definable property, and so every sentence define a property $\mathcal{P}\in\FO$. 
+
+\begin{lem}\label{lem:4}
+Every $\FO$-definable property is decidable in polynomial time.
+\end{lem}
+
 Let $\L$ be a logic, $\C$ a complexity class and $\K$ a class of finite structures. We say that $\L$ captures $\C$ on $\K$ if for every vocabulary $\tau$ and every property $\mathcal{P}\in\K(\tau)$
 \[\mathcal{P}\text{ is $\LL$-definable }\Leftrightarrow\ L(\mathcal{P})\in\C.\] This fact is denoted as $\L =_{} \C$. 
+
+\begin{thm}
+[Fagin \cite{Fagin74}] $\SO\exists$ captures $\NP$ on the class of all finite structures.
+\end{thm}
 
 
 \subsection{First-order dependence}
@@ -173,7 +194,7 @@ type with only one term which we shall name the \emph{unit type}:
 
 There are two introduction rules for types, these rules tell us how to construct new types from old ones. There is the introduction rule for \emph{product types}:
 
-<<<<<<< Updated upstream
+
 \begin{prooftree}
       \AxiomC{$A \ type$}
       \AxiomC{$B \ type$}
@@ -193,8 +214,7 @@ Now the set of types is defined we would like to define in a similar way the set
 \[
 t := [variables] | [constants] | * | <t , t'> | \pi_1 t | \pi_2 t | t(t') | \lambda x.t
 \]
-=======
->>>>>>> Stashed changes
+
 \nocite{*}
 \bibliographystyle{alpha}
 \bibliography{paper}
