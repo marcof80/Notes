@@ -192,6 +192,7 @@ Now the set of types is defined we would like to define in a similar way the set
 \[
 t := [variables] \ | \ [constants] \ | \  * \ | \ <t , t'> \ | \ \pi_1 t \ | \ \pi_2 t \ | \ t(t') \ | \ \lambda x.t
 \]
+A term of the form $t(t')$ is called an \emph{application} and one of the form $\lambda x.t$ is called a \emph{lambda abstraction}.
 
 There are two ways a variable $x$ can appear in a given term $t$. We say that $x$ is \emph{bound} in $t$ if it appears in the scope of a lambda abstraction, i.e. if inside of $t$ there is a substring of the form $\lambda x.t'$ for some $t'$. \emph{Free} variables are those that are not bound.
 
@@ -228,16 +229,26 @@ To form new typing judgements we need to follow some specified rules. We will no
       \AxiomC{}
       \UnaryInfC{$\Gamma \vdash a : A$}
     \end{prooftree}
+
     \item The type of a variable is determined by the context, i.e. if $x_i : A_i$ ocurre in a context $\Gamma$ we have that:
     \begin{prooftree}
       \AxiomC{}
       \UnaryInfC{$\Gamma \vdash x_i : A_i$}
     \end{prooftree}
+
     \item The term $*$ has type $1$ in every context:
     \begin{prooftree}
       \AxiomC{}
       \UnaryInfC{$\Gamma \vdash * : 1$}
     \end{prooftree}
+
+    \item The context of a given judgement can be extended. This rule is known as \emph{weakening}:
+    \begin{prooftree}
+      \AxiomC{$\Gamma \vdash t : A$}
+      \UnaryInfC{$\Gamma , \Delta \vdash t : A$}
+    \end{prooftree}
+    where the context $\Gamma , \Delta$ is given by the union $\Gamma \cup \Delta$.
+
     \item Rules for product types:
     \begin{center}
       \begin{minipage}[t]{5cm}
@@ -284,8 +295,78 @@ To form new typing judgements we need to follow some specified rules. We will no
       \end{minipage}
     \end{center}
 where $\Gamma , x : A$ is the context $\Gamma \cup \{x : A\}$.
-
 \end{itemize}
+
+Apart from the typing judgment there is another kind of syntactic judgement, the \emph{equality judgement}, this specifies when two terms of the same type (under the same context) are equal. It's written as follows:
+\[
+\Gamma \vdash t = u : A
+\]
+Equality must at least be an equivalence relation, so we have the following rules:
+    \begin{center}
+      \begin{minipage}[t]{5cm}
+        \vspace{0pt}  
+        \begin{prooftree}
+          \AxiomC{}
+          \UnaryInfC{$\Gamma \vdash t  = t : A$}
+        \end{prooftree}
+      \end{minipage}
+      \begin{minipage}[t]{5cm}
+        \vspace{0pt}
+        \begin{prooftree}
+          \AxiomC{$\Gamma \vdash t = u : A$}
+          \UnaryInfC{$\Gamma \vdash u = t : A$}
+        \end{prooftree}
+      \end{minipage}
+      \begin{minipage}[t]{5cm}
+        \vspace{0pt}
+        \begin{prooftree}
+          \AxiomC{$\Gamma \vdash t = u : A$}
+          \AxiomC{$\Gamma \vdash u = v : A$}
+          \BinaryInfC{$\Gamma \vdash t = v : A$}
+        \end{prooftree}
+      \end{minipage}
+    \end{center}
+
+The equality judgement must behave well with the rules for typing judgements, this means that for each of the rules seen before, there is an appropriate coherence rule for equality judgement. For example, for the application rule of functions, we have the corresponding rule:
+\begin{prooftree}
+      \AxiomC{$\Gamma \vdash f = g : A \rightarrow B$}
+      \AxiomC{$\Gamma \vdash u = v : A$}
+      \BinaryInfC{$\Gamma \vdash f(u) = g(v) : B$}
+\end{prooftree}
+This is true for all the rules previously stated: weakening rule, product and function rules and unit rule.
+
+Finally there are three important rules that are meant to formalize the important notions of function application and abstraction.
+\begin{itemize}
+\item The \emph{$\alpha$-conversion} rule formalizes the notion that bound variables in a given term can be interchanged without altering the meaning of the term:
+\begin{prooftree}
+  \AxiomC{$\Gamma , x : A \vdash t : B$}
+  \RightLabel{(\emph{$\alpha$-conv})}
+  \UnaryInfC{$\Gamma \vdash \lambda x.t = \lambda y.t[y/x] : A \rightarrow B$}
+\end{prooftree}
+where $y$ is a variable that does not ocurre freely in $t$.
+
+\item The \emph{$\beta$-reduction} rules tells us that if we first abstract a variable $x$ from a term $t$ and then apply the resulting function to another term $u$, the result must be the same as syntactically substituting $u$ for $x$ in the original term $t$:
+\begin{prooftree}
+  \AxiomC{$\Gamma , x : A \vdash t : B$}
+  \AxiomC{$\Gamma \vdash u : A$}
+  \RightLabel{(\emph{$\beta$-redu})}
+  \BinaryInfC{$\Gamma \vdash (\lambda x.t)(u) = t[u/x] : B$}
+\end{prooftree}
+
+\item The \emph{$\eta$-reduction} formalizes the notion of function extensionality, i.e. that two function that have the same output on each term are equal:
+
+\begin{prooftree}
+  \AxiomC{$\Gamma \vdash f : A \rightarrow B$}
+  \RightLabel{(\emph{$\eta$-redu})}
+  \UnaryInfC{$\Gamma \vdash \lambda x . f(x) = f : A \rightarrow B$}
+\end{prooftree}
+\end{itemize}
+
+The above collection of data characterise the simply-typed lambda calculus, so let's summarize this in a definition.
+\begin{defn}
+A \emph{simply-typed lambda calculus} is given by a set of Basic Types and a set of Constants subject to the rules given above. 
+\end{defn}
+
 \nocite{*}
 \bibliographystyle{alpha}
 \bibliography{paper}
