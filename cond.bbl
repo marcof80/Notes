@@ -1,0 +1,54 @@
+\begin{thebibliography}{1}
+
+\bibitem{EbbinghausFlum}
+H.D. Ebbinghaus and J.~Flum.
+\newblock {\em Finite Model Theory}.
+\newblock Perspectives in mathematical logic. Springer, 1999.
+
+\bibitem{Fagin74}
+Ronald Fagin.
+\newblock Generalized first-order spectra and polynomial-time recognizable
+  sets.
+\newblock In R.~Karp, editor, {\em Complexity of Computation}, volume~7, pages
+  43--73, 1974.
+
+\bibitem{Immerman86}
+Neil Immerman.
+\newblock Relational queries computable in polynomial time.
+\newblock {\em Information and Control}, 68:86--104, 1986.
+
+\bibitem{ams}
+Neil Immerman.
+\newblock Descriptive complexity: a logician's approach to computation.
+\newblock {\em Notices of the AMS}, 1995.
+
+\bibitem{qip}
+Rahul Jain, Zhengfeng Ji, Sarvagya Upadhyay, and John Watrous.
+\newblock Qip = pspace.
+\newblock {\em J. ACM}, 58(6):30:1--30:27, December 2011.
+
+\bibitem{Kitaev}
+A.Y. Kitaev, A.~Shen, and M.N. Vyalyi.
+\newblock {\em Classical and Quantum Computation}.
+\newblock Graduate studies in mathematics. American Mathematical Society, 2002.
+
+\bibitem{Libkin}
+L.~Libkin.
+\newblock {\em Elements of Finite Model Theory}.
+\newblock Texts in Theoretical Computer Science. An EATCS Series. Springer,
+  2004.
+
+\bibitem{dep}
+J.~V{\"a}{\"a}n{\"a}nen.
+\newblock {\em Dependence Logic: A New Approach to Independence Friendly
+  Logic}.
+\newblock London Mathematical Society Student Texts. Cambridge University
+  Press, 2007.
+
+\bibitem{models}
+J.~V{\"a}{\"a}n{\"a}nen.
+\newblock {\em Models and Games}.
+\newblock Cambridge Studies in Advanced Mathematics. Cambridge University
+  Press, 2011.
+
+\end{thebibliography}

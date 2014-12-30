@@ -1,9 +1,5 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Computability}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{Turing machines}{subsection.1.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.1.2}{Complexity classes}{subsection.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.2}{Descriptive complexity}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.3}{First-order dependence}{section.1}% 6
-\BOOKMARK [2][-]{subsection.1.4}{Ultraproduct}{section.1}% 7
-\BOOKMARK [3][-]{subsubsection.1.4.1}{Ultrafilters}{subsection.1.4}% 8
-\BOOKMARK [1][-]{section.2}{Categorical Semantics of the Lambda Calculus}{}% 9
+\BOOKMARK [2][-]{subsection.1.1}{First-order dependence}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Ultraproduct}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Ultrafilters}{subsection.1.2}% 4
+\BOOKMARK [1][-]{section.2}{Categorical Semantics of the Lambda Calculus}{}% 5

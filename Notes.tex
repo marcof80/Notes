@@ -10,104 +10,19 @@
 
 \section{Introduction}
 
-\subsection{Computability}
-Here some rudiments of the computability theory and complexity theory.
-
-\subsubsection{Turing machines}\label{ap:1}
-
-A Turing machine is a particular assembly and mode of operation of the following components: a finite set of symbols $S$ which contains element $\bot\in S$ called the ``blank" symbol; a subset $\Sigma\subseteq S\setminus \{\bot\}$ called the \emph{input alphabet}; a finite set of states $Q$ which contains an initial state $q_0\in Q$; a partial function $\delta : Q\times S\rightarrow Q\times S\times\{-1,0,1\}$ called the transition function.
-
-Computation is performed by a read-write head on symbols over a tape divided into cells, each cell carries one symbol from $S$.  The tape is infinite to the right; its content is a sequence $\sigma = \sigma_0, \sigma_1,\dots$ where $\sigma_i\in \Sigma$. The head in position $p\in\mathbb{N}$ can read symbol $s_p$ and write another symbol in its place. The configuration of a Turing machine is a triple $\langle\sigma ; p; q\rangle$ where $q\in Q$.
-
-At each step the machine computes $\delta(q,s_p) = (q^{\prime}, s^{\prime}, \Delta p)$, which determines its new configuration $\langle s_0,\dots,s_{p-1}, s^{\prime},s_{p+1},\dots; p+\Delta p; q^{\prime}\rangle$ after the transition. A Turing machine \emph{halts} whenever $\delta(q,s_p)$ is undefined, or $p+\Delta p < 0$. Otherwise, it may never stops.
-
-Inputs and outputs are strings over $\Sigma$. Initially the tape is filled with $\sigma\in \Sigma^{\ast}$ and padded with blanks; the head is at the left end so the initial configuration of the machine is $\gamma_0 := \langle\sigma\bot\bot\dots ; 0; q_0\rangle$. If the machine eventually halts, the output is the string written on the tape. In general, a computation can be seen as a sequence of configurations \[\langle\sigma\bot\bot\dots ; 0; q_0\rangle\rightarrow\langle\sigma^{\prime} ; p; q\rangle\rightarrow\cdots\] which we will denote by $\gamma_0\vdash\gamma_1\vdash\cdots$.
-
-
-Every Turing machine $M$ computes a partial function $\Phi_{M} : \Sigma^{\ast}\rightarrow \Sigma^{\ast}$. By definition, $\Phi_{M} (\sigma)$ is the output string for input $\sigma$. The value $\Phi_{M} (\sigma)$ is undefined if the computation never terminates.
-
-A partial function $f :\Sigma^{\ast}\rightarrow \Sigma^{\ast}$ is \emph{computable} if there exists a Turing machine $M$ such that $\Phi_{M} = f$. In this case we say that $f$ is computed by $M$.
-
- A predicate is a property that can be true or false. Predicates whose domain of discourse is the set $\Sigma^{\ast}$ can be identified with languages $\{x : P(x)\}\subseteq \Sigma^{\ast}$ over $\Sigma$. Formally, a predicate is a function $P :\Sigma^{\ast}\rightarrow \{0,1\}$ which is said to be decidable if there exists a Turing machine that computes it.
-
-
-A Turing machine $M$ works in time $T(n)$ if it performs at most $T(n)$ steps to computes $\Phi_{M} (\sigma)$ for any $\sigma\in \Sigma^{\ast}$ such that $|\sigma|=n$. Analogously, $M$ works in space $s(n)$ if $|\Phi_{M} (\sigma)|\leq s(n)$ for any $\sigma\in \Sigma^{\ast}$ such that $|\sigma|=n$.
-
-A  nondeterministic Turing machine is a Turing machine which have a multivalued transition function, i.e. the function $\delta$ is not an injection.
-
-
- For some purpose it may be convenient to consider multitape Turing machines that have a finite number of tapes. Each tape has a head that can read and write symbols on it. However, two special tapes are distinguished: an input read-only tape, and an output write-only tape. The remaining tapes are called the work tapes. 
-
-
-\subsubsection{Complexity classes}\label{ap:2}
-
-Let $f$ and $g$ be two functions. For sufficiently large $n$, if $|f(n)|\leq k\cdot g(n)$ for some $k>0$, we write $f(n)\in O(g(n))$; if $f(n)\geq k\cdot g(n)$ for some $k>0$, we write $f(n)\in \Omega (g(n))$. If, particularly $f(n)\leq c\cdot n^k$ for some $c,k$ constants, we write $f(n)= \poly(n)$.
-
-A function $F$ on $\Sigma^{\ast}$ is computable in polynomial time if there exists a Turing machine that computes it in time $T(n) =\poly(n)$, for every $\sigma\in \Sigma^{\ast}$ such that $|\sigma| = n$. If $F$ is a predicate, we say that it is decidable in polynomial time.
-
-We define the complexity class $\P$ as the class of all functions computable in polynomial time, or all predicates decidable in polynomial time. Notice that $F\in\P$ implies $|F(x)| =\poly(|x|)$.
-
-A function (predicate) $F$ on $\Sigma^{\ast}$ is computable (decidable) in polynomial space if there exists a Turing machine that computes $F$ and runs in space $s(n) =\poly(n)$, for every $\sigma\in \Sigma^{\ast}$ such that $|\sigma| = n$.
-
-The class of all functions (predicates) computable (decidable) in polynomial space is called $\PSPACE$. Notice from the definitions that clearly $\P\subseteq\PSPACE$. 
-
-Complexity class $\NP$ is defined as the class of predicates decidable in polynomial time by nondeterministic Turing machines. Notice that $\NP$ is defined only for predicates. The class $\coNP$ is defined as the class of predicates whose complements are in the $\NP$ class. 
-
-Let $\Sigma_{0}^{\P} := \Pi_{0}^{\P} := \P$. For $i\geq 0$, define $\Sigma_{i+1}^{\P} := \NP^{\Sigma_{i}^{\P}}$ and $\Pi_{i+1}^{\P} :=\coNP^{\Pi_{i}^{\P}}$ where $\varA^{\varB}$ is the class of languages accepted by a Turing machine that computes languages in $\varA$, augmented by a particular machine that computes languages in $\varB$. Notice that  $\Sigma_{1}^{\P} = \NP$.
-
-The polynomial hierarchy $\Sigma_{\ast}\P$ is defined as
-\begin{equation*}
-\Sigma_{\ast}\P\ \ :=\ \bigcup_{i\in\mathbb{N}} \Sigma_{i}^{\P}\ :=\ \bigcup_{i\in\mathbb{N}} \Pi_{i}^{\P}.
-\end{equation*}
-
-
-\begin{conj}
-It follows from the definitions that
-\begin{equation*}
-%\text{L}\ \subseteq\ \text{NL}\ \subseteq\ 
-\P \subseteq\ \{\NP, \coNP \}\ \subseteq\ \Sigma_{\ast}\P\ \subseteq\ \PSPACE.
-\end{equation*}
-\end{conj}
-
-\subsection{Descriptive complexity}
-Recall that for every alphabet $\Sigma$ and every Turing machine $M$, we can consider the language \[L(M) = \{w\in\Sigma^{\ast} : M\text{ accepts }w\}.\] We call $L(M)$ the language \emph{decided} by $M$, since for each string $w$ the machine $M$ decides whether it accepts $w$ or not. 
-
-For represent a property $\mathcal{P}\subseteq\Ord(\tau)$ as a language in $\{0,1\}^{\ast}$, we use some encoding into binary strings $\langle\ \cdot\ \rangle:\Ord\rightarrow\{0,1\}^{\ast}$ and let 
-\[L(\mathcal{P}):=\{ \langle A, < \rangle: (A,<)\in\mathcal{P} \}\subseteq\{0,1\}^{\ast}.\]
-Arbitrarily classes of finite structures, not necessarily ordered, are encoded using the same representation scheme. That is, for each $\K\subseteq \Fin$ we define the binary language 
-\[L(\K):=\{ \langle A, < \rangle: A\in\K,\ <\text{is a linear order on } U(A) \}.\]
-
-We will say that a property $\mathcal{P}\subseteq\Fin$ is \emph{decidable} if there exists  a Turing machine $M$ that decides the language $L(\mathcal{P})\subseteq \{0,1\}^{\ast}$, that is, if $L(\mathcal{P})=L(M)$.
-
-In descriptive complexity theory one would like to establish a relationship between computational complexity classes and different types of logics.  Let $\mathcal{P}$ be a property of $\tau$-structures and $\L$ some logic. We say that $\mathcal{P}$ is $\L$-\emph{definable} if there exists a sentence $\varphi\in\L(\tau)$ such that $\mathcal{P} = \Mod(\varphi)$. We define $\FO$ as the set of all $\FO$-definable properties.
-
-Recall that given a any first-order sentence $\psi$, the model class $\Mod(\psi)$ is contained in the class of all structures and therefore, for finite structures, we have that every model class is an $\FO$-definable property, and so every sentence define a property $\mathcal{P}\in\FO$. 
-
-\begin{lem}\label{lem:4}
-Every $\FO$-definable property is decidable in polynomial time.
-\end{lem}
-
-Let $\L$ be a logic, $\C$ a complexity class and $\K$ a class of finite structures. We say that $\L$ captures $\C$ on $\K$ if for every vocabulary $\tau$ and every property $\mathcal{P}\in\K(\tau)$
-\[\mathcal{P}\text{ is $\LL$-definable }\Leftrightarrow\ L(\mathcal{P})\in\C.\] This fact is denoted as $\L =_{} \C$. 
-
-\begin{thm}
-[Fagin \cite{Fagin74}] $\SO\exists$ captures $\NP$ on the class of all finite structures.
-\end{thm}
-
-
 \subsection{First-order dependence}
-
-A first-order dependence logic $\D$ is a class which consists of all $\D$-definable properties where $\D := (\FO + \mu.\bar{t})$ and $\mu.\bar{t}$ denotes that term $t_{|\bar{t}|}$ is functionally dependent on $t_{i}$ for all $i\leq |\bar{t}|$. The model class $\FO$ is as always defined as the class of models of all first-order sentences (i.e. $\FO:= \{S:(\exists\tau)(\exists\varphi\in L(\tau))\ S=\Mod(\varphi)\}$ where $L(\tau)$ is a first-order language of type $\tau$) and $\mu.\bar{t}$ is interpreted as a recursively generated tuple of terms which we naturally identify with the set $[|\bar{t}|] := \{1,2,\dots,|\bar{t}|\}$. $\D$ sentences are capable to characterise variable dependence and in general they are proven to be as expressive as the sentences of the second order existential $\SO\exists$ model class \cite{dep}. The intuitionistic dependence version $\ID$ has the same expressive power as full $\SO$ \cite{dep}. It is a fact that $\MID$-model checking is $\PSPACE$-complete \cite{dep} where $\MID$ is the intuitionistic implication fragment of the modal dependence logic $\MD$ which contains at least two modifiers. Hence, $(\FO + \mu.\bar{t}) = \NP, \ID = \Sigma_{\ast}\P$ and $\MID = \PSPACE$.  On the other hand, $\PSPACE = \IP = \QIP$ \cite{qip}, and so $\MID = \QIP$ which is the quantum version of the interactive polytime class $\IP$.
-
-We shall try to cook up a purely algebraic definition for the class of structures $\MID$ and extend such algebraic logic in order to capture other quantum and classical complexity classes. 
-
-\subsection{Ultraproduct}
 
 In this section every vocabulary $\tau$ will be referred as a similarity type or simply as a type.
 
 The model class $\FO$ is, as always, defined as the class of models of all first-order sentences, i.e. $\FO:= \{S:(\exists\tau)(\exists\varphi\in L(\tau))\ S=\Mod(\varphi)\}$ where $L(\tau)$ is a first-order language of type $\tau$.
 
-Ehrenfeucht-Fra\"iss\'e games characterise the expressive power of logical languages \cite{ams}. Every Ehrenfeucht-Fra\"iss\'e game is an ultraproduct \cite{models}, a back-and-forth method for showing isomorphism between countably infinite structures, but only defined for finite structures in finite model theory. If $F$ is an ultrafilter (i.e. $F\subseteq 2^{\mathbb{N}}$ and $\forall X\subseteq\mathbb{N} (X\notin F \Leftrightarrow \mathbb{N}\setminus X\in F)$ holds) then the reduced product $\prod_{i}M_i / F$ is an ultraproduct of the sets $M_i$, $i\in I$. Recall that \[f\sim g \Leftrightarrow \{i\in I : f(i) = g(i)\}\in F\] for all infinite sequences $f,g\in\prod_i M_i$ and any index set $I$, is the relation which induces the equivalence classes that conform the ultraproduct \[\prod_{i}M_i / F = \{[f]:f\in\prod_i M_i\}.\] 
+A first-order dependence logic $\D$ is a class which consists of all $\D$-definable properties where $\D := (\FO + \mu.\bar{t})$ and $\mu.\bar{t}$ denotes that term $t_{|\bar{t}|}$ is functionally dependent on $t_{i}$ for all $i\leq |\bar{t}|$. The model class $\FO$ is as always defined as the class of models of all first-order sentences (i.e. $\FO:= \{S:(\exists\tau)(\exists\varphi\in L(\tau))\ S=\Mod(\varphi)\}$ where $L(\tau)$ is a first-order language of type $\tau$) and $\mu.\bar{t}$ is interpreted as a recursively generated tuple of terms which we naturally identify with the set $[|\bar{t}|] := \{1,2,\dots,|\bar{t}|\}$. $\D$ sentences are capable to characterise variable dependence and in general they are proven to be as expressive as the sentences of the second order existential $\SO\exists$ model class \cite{dep}. The intuitionistic dependence version $\ID$ has the same expressive power as full $\SO$ \cite{dep}. It is a fact that $\MID$-model checking is $\PSPACE$-complete \cite{dep} where $\MID$ is the intuitionistic implication fragment of the modal dependence logic $\MD$ which contains at least two modifiers. Hence, $(\FO + \mu.\bar{t}) = \NP, \ID = \Sigma_{\ast}\P$ and $\MID = \PSPACE$.  On the other hand, $\PSPACE = \IP = \QIP$ \cite{qip}, and so $\MID = \QIP$ which is the quantum version of the interactive polytime class $\IP$.
+
+We shall try to cook up a purely algebraic definition for the class of structures $\MID$ and extend such categorical logic in order to capture other quantum and classical complexity classes. 
+
+\subsection{Ultraproduct}
+
+Ehrenfeucht-Fra\"iss\'e games characterise the expressive power of logical languages \cite{ams}. Every Ehrenfeucht-Fra\"iss\'e game is an ultraproduct \cite{models}, a back-and-forth method for showing isomorphism between countably infinite structures, but only defined for finite structures in finite model theory. If $F$ is an ultrafilter (i.e. $F\subseteq 2^{\mathbb{N}}$ such that $\forall X\subseteq\mathbb{N} (X\notin F \leftrightarrow \mathbb{N}\setminus X\in F)$ holds) then the reduced product $\prod_{i}M_i / F$ is an ultraproduct of the sets $M_i$, $i\in I$. Recall that \[f\sim g \Leftrightarrow \{i\in I : f(i) = g(i)\}\in F\] for all infinite sequences $f,g\in\prod_i M_i$ and any index set $I$, is the relation which induces the equivalence classes that conform the ultraproduct \[\prod_{i}M_i / F = \{[f]:f\in\prod_i M_i\}.\] 
 
 This mathematical tool (the ultraproduct) is widely important because of results such as the following, from which proof we will delayed for the moment.
 
@@ -116,8 +31,15 @@ If $F$ is an ultrafilter and $\varphi$ a first-order formula, then the ultraprod
 \end{lem}
 
 \subsubsection{Ultrafilters}
+Given a nonempty set $L$ define a binary relation $\succ$ on it by forcing the following formulas true:
+\begin{itemize} 
+\item[1.] Reflexivity: $\forall x (x\succ x)$
+\item[2.] Transitivity: $\forall xyz (x\succ y)\land (y\succ z)\rightarrow (x\succ z)$
+\item[3.] Antisymmetry: $\forall xy (x\succ y)\land (y\succ x)\rightarrow (x=y)$ 
+\end{itemize}
+The pair $\langle L, \succ \rangle$ is called a \emph{poset} and $\succ$ a \emph{partial order} on $L$. For every two-element subset $\{x,y\}$ of $L$ we define its \emph{meet} and \emph{join} as $x\sqcap y := \inf_{\succ}\{x,y\}$ and $x\sqcup y := \sup_{\succ}\{x,y\}$, respectively. A \emph{lattice} is a poset where every two-element subset has meet and join (i.e. $\forall\{x,y\}\in 2^L(\exists (x\sqcap y)\in L\land\exists (x\sqcup y)\in L)$ is satisfied).
 
-
+A \emph{filter} is a subset $F$ of a lattice $L$ which contains all the \emph{successors} of any member of $F$ (i.e. $\forall xy(y\in F)\land(x\succ y)\rightarrow(x\in F)$ holds). An \emph{ultrafilter} $U$ is a maximal filter with respect to the usual partial order relation that one can always define on any Boolean algebra (particularly on $2^L$).
 %\subsection{Descriptive complexity}
 %%
 %%

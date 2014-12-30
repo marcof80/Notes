@@ -1,0 +1,61 @@
+\include{Prefacio}
+%\documentclass[12pt]{amsart}
+%\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+%\geometry{a4paper} % or letter or a5paper or ... etc
+%% \geometry{landscape} % rotated page geometry
+%
+%% See the ``Article customise'' template for come common customisations
+
+\title{Notes model theory}
+\author{OZ}
+%\date{} % delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle
+%\tableofcontents
+%
+%\section{Ultraproducts}
+%\subsection{}
+\subsubsection*{Intro}
+Ehrenfeucht-Fra\"iss\'e games characterise the expressive power of logical languages \cite{ams}. Every Ehrenfeucht-Fra\"iss\'e game is an ultraproduct \cite{models}, a back-and-forth method for showing isomorphism between countably infinite structures, but only defined for finite structures in finite model theory. There are techniques in AI for model-checking algorithmically properties on generic objects like finite structures of some specified vocabulary. There is however a deeper relationship that can be described using ultrafilters and ultralimits. 
+
+
+We want a way to study discrete objects with continuous methods. This can be achieved via an ultraproduct construction. 
+
+Suppose $\alpha$ is a non-principal ultrafilter on $I\in 2^{\mathbb{N}}$ and $A_i$, $B_i$ structures of a countable vocabulary $\tau$. An ultrafilter is a filter that is maximal w.r.t. the partial ordering of any Boolean algebra in which the filter has been defined, in particular of the lattice $\mathbf{2} := \langle 2^{\mathbb{N}}, \subseteq\rangle$ when thinking of ultrafilters as subsets of the natural numbers $\mathbb{N}$ with the finite intersection property (i.e. $\inf\{\alpha\subseteq\mathbb{N}: |\alpha|<\aleph_0\} \neq 0$). An ultrafilter $\alpha$ is non-principal if it contains no finite set. 
+ 
+ 
+ Assuming that $\alpha$ is a filter containing an infinite descending sequence with empty intersection, we have the following result.
+\begin{thm*}
+If $A_i \equiv B_i$ for all $i\in I$, then player $B$ has a winning strategy in $EF_{\omega} (\prod_{i} A_i/\alpha, \prod_{i} B_i/\alpha)$.
+\end{thm*}
+
+\subsubsection*{Ultrafilters}
+Given a nonempty set $L$ define a binary relation $\succ$ on it by forcing the following formulas true:
+\begin{itemize} 
+\item[1.] Reflexivity: $\forall x (x\succ x)$
+\item[2.] Transitivity: $\forall xyz (x\succ y)\land (y\succ z)\rightarrow (x\succ z)$
+\item[3.] Antisymmetry: $\forall xy (x\succ y)\land (y\succ x)\rightarrow (x=y)$ 
+\end{itemize}
+The pair $\langle L, \succ \rangle$ is called a \emph{poset} and $\succ$ a \emph{partial order} on $L$. For every two-element subset $\{x,y\}$ of $L$ we define its \emph{meet} and \emph{join} as $x\sqcap y := \inf_{\succ}\{x,y\}$ and $x\sqcup y := \sup_{\succ}\{x,y\}$, respectively. A \emph{lattice} is a poset where every two-element subset has meet and join (i.e. $\forall\{x,y\}\in 2^L(\exists (x\sqcap y)\in L\land\exists (x\sqcup y)\in L)$ is satisfied).
+
+A \emph{filter} is a subset $F$ of a lattice $L$ which contains all the \emph{successors} (if we name ``$\succ$" the ``successor" relation) of any member of $F$ (i.e. $\forall xy(y\in F)\land(x\succ y)\rightarrow(x\in F)$ holds). An \emph{ultrafilter} $\alpha$ is a maximal filter with respect to the usual partial order relation that one can always define in any Boolean algebra (particularly in $2^L$). Ultrafilters are characterised by the next equivalence.
+
+\begin{lem*}
+If $\alpha$ is a filter in a Boolean algebra $B$, $\alpha$ is an ultrafilter if and only if for each $x\in B$ either $x\in\alpha$ or $1-x\in \alpha$, but not both.
+\end{lem*}
+
+\subsubsection*{$\defaultL$o\'s lemma}
+\begin{lem*}[$\defaultL$o\'s Lemma]
+If $\alpha$ is an ultrafilter and $\varphi$ a first-order formula, then the ultraproduct of models of $\varphi$ indexed by any index set $I\in \alpha$ is a model of $\varphi$, i.e. \[\prod_i A_i / \alpha\models\varphi\Leftrightarrow\{i\in I: A_i\models\varphi\}\in \alpha.\]
+\end{lem*}
+
+\subsubsection*{Ultraproducts}
+An ultraproduct is a mathematical construction that permits us to take the limit of any discrete object in any discrete space and actually build a limit object which exists in the ultraproduct of the spaces which is for instance a limit space. The ultraproduct construction is a universal way to go from discrete to continuous, back and forth, carrying along the axioms and the operations.
+
+%\nocite{*}
+\bibliographystyle{plain}
+\bibliography{ultraproduct}
+\end{document}
