@@ -19,12 +19,12 @@
 %\section{Ultraproducts}
 %\subsection{}
 \subsubsection*{Intro}
-Ehrenfeucht-Fra\"iss\'e games characterise the expressive power of logical languages \cite{ams}. Every Ehrenfeucht-Fra\"iss\'e game is an ultraproduct \cite{models}, a back-and-forth method for showing isomorphism between countably infinite structures, but only defined for finite structures in finite model theory. There are techniques in AI for model-checking algorithmically properties on generic objects like finite structures of some specified vocabulary. There is however a deeper relationship that can be described using ultrafilters and ultralimits. 
+Ehrenfeucht-Fra\"iss\'e games characterise the expressive power of logical languages \cite{ams}. Every Ehrenfeucht-Fra\"iss\'e game is an ultraproduct \cite{models}, a back-and-forth method for showing isomorphism between countably infinite structures, but only defined for finite structures in finite model theory. There are highly elaborated algorithmic techniques in AI for model-checking properties on generic objects like finite structures of some specified vocabulary (e.g. \cite{Carrillo}), each of which somewhat builds on the relationship between game theoretic methods for showing complexity results, such as EF games, and its logical structure and interpretations. Thereof a deeper relationship can be described using ultrafilters and ultralimits. 
 
 
 We want a way to study discrete objects with continuous methods. This can be achieved via an ultraproduct construction. 
 
-Suppose $\alpha$ is a non-principal ultrafilter on $I\in 2^{\mathbb{N}}$ and $A_i$, $B_i$ structures of a countable vocabulary $\tau$. An ultrafilter is a filter that is maximal w.r.t. the partial ordering of any Boolean algebra in which the filter has been defined, in particular of the lattice $\mathbf{2} := \langle 2^{\mathbb{N}}, \subseteq\rangle$ when thinking of ultrafilters as subsets of the natural numbers $\mathbb{N}$ with the finite intersection property (i.e. $\inf\{\alpha\subseteq\mathbb{N}: |\alpha|<\aleph_0\} \neq 0$). An ultrafilter $\alpha$ is non-principal if it contains no finite set. 
+Suppose $\alpha$ is a non-principal ultrafilter on $I\in 2^{\mathbb{N}}$ (actually, on $2^I\subseteq 2^\mathbb{N}$ to be more precise) and $A_i$, $B_i$ are structures of a countable vocabulary $\tau$. An ultrafilter is a filter that is maximal w.r.t. the partial ordering of any Boolean algebra on which the filter has been defined, in particular w.r.t. the partial order on the lattice $\mathbf{2} := \langle 2^{\mathbb{N}}, \subseteq\rangle$ (which is clearly a Boolean algebra), when thinking of ultrafilters as subsets of the natural numbers $\mathbb{N}$ with the finite intersection property (i.e. $\inf\{\alpha\subseteq\mathbb{N}: |\alpha|<\aleph_0\} \neq 0$). An ultrafilter $\alpha$ is non-principal if it contains no finite set. 
  
  
  Assuming that $\alpha$ is a filter containing an infinite descending sequence with empty intersection, we have the following result.
@@ -47,13 +47,16 @@ A \emph{filter} is a subset $F$ of a lattice $L$ which contains all the \emph{su
 If $\alpha$ is a filter in a Boolean algebra $B$, $\alpha$ is an ultrafilter if and only if for each $x\in B$ either $x\in\alpha$ or $1-x\in \alpha$, but not both.
 \end{lem*}
 
-\subsubsection*{$\defaultL$o\'s lemma}
-\begin{lem*}[$\defaultL$o\'s Lemma]
-If $\alpha$ is an ultrafilter and $\varphi$ a first-order formula, then the ultraproduct of models of $\varphi$ indexed by any index set $I\in \alpha$ is a model of $\varphi$, i.e. \[\prod_i A_i / \alpha\models\varphi\Leftrightarrow\{i\in I: A_i\models\varphi\}\in \alpha.\]
-\end{lem*}
-
 \subsubsection*{Ultraproducts}
 An ultraproduct is a mathematical construction that permits us to take the limit of any discrete object in any discrete space and actually build a limit object which exists in the ultraproduct of the spaces which is for instance a limit space. The ultraproduct construction is a universal way to go from discrete to continuous, back and forth, carrying along the axioms and the operations.
+
+Now, \cite{Hirsch}
+
+\subsubsection*{$\defaultL$o\'s's lemma}
+\begin{thm*}[$\defaultL$o\'s's Lemma]
+If $\alpha$ is an ultrafilter and $\varphi$ a first-order formula, then the ultraproduct of models of $\varphi$ indexed by any index set $I\in \alpha$ is a model of $\varphi$, i.e. \[\prod_i A_i / \alpha\models\varphi\Leftrightarrow\{i\in I: A_i\models\varphi\}\in \alpha.\]
+\end{thm*}
+
 
 %\nocite{*}
 \bibliographystyle{plain}

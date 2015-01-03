@@ -1,5 +1,15 @@
 \begin{thebibliography}{1}
 
+\bibitem{Carrillo}
+Miguel Carrillo and David~A. Rosenblueth.
+\newblock \{CTL\} update of kripke models through protections.
+\newblock {\em Artificial Intelligence}, 211(0):51 -- 74, 2014.
+
+\bibitem{Hirsch}
+R.~{Hirsch}, M.~{Jackson}, and S.~{Mikul{\'a}s}.
+\newblock {The algebra of functions with antidomain and range}.
+\newblock {\em ArXiv e-prints}, October 2014.
+
 \bibitem{ams}
 N.~Immerman.
 \newblock Descriptive complexity: a logician's approach to computation.
